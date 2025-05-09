@@ -3,13 +3,20 @@ pub mod state;
 pub mod error;
 pub mod constants;
 
+#[cfg(test)]
+pub mod test;
+
 use solana_program::{
     account_info::AccountInfo,
     entrypoint,
     entrypoint::ProgramResult,
     pubkey::Pubkey,
     msg,
+    declare_id,
 };
+
+// Program ID
+declare_id!("SoLnAP1ayerWa11etPr0graM111111111111111111");
 
 use instructions::*;
 
